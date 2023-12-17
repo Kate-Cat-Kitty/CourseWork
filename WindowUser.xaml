@@ -1,0 +1,430 @@
+﻿<Window x:Class="MyPizza.WindowUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyPizza"
+        mc:Ignorable="d"
+        Title="WindowUser" Height="600" Width="900" FontFamily="Californian FB"
+    xmlns:materialDesign="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
+    xmlns:converters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf" Background="#FFF9F6F6">
+
+    <Viewbox>
+        <Grid>
+            <TabControl 
+
+            Grid.ColumnSpan="3"
+            Grid.RowSpan="1"
+        
+        TabStripPlacement="Bottom">
+                <!--#region Вкладка 1-->
+                <TabItem Header="Меню" Width="300" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100*"></ColumnDefinition>
+                            <ColumnDefinition Width="100*"></ColumnDefinition>
+                            <ColumnDefinition Width="100*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <!--#region Карточка 1-->
+                        <materialDesign:Card Grid.Column="0" Width="300">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="190" />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Image Width="auto"
+                                   Height="auto"
+                                   Source="/пперони.png"
+                                   Stretch="UniformToFill" 
+                                   />
+                                <Button
+                                
+                                Grid.Row="2"
+                                Margin="137,53,0,-180"
+                                HorizontalAlignment="Left"
+                                Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryButton}" Background="#FFFDE910" Width="40"
+                                >
+                                    <materialDesign:PackIcon
+                                    Kind="BasketPlus" Margin="0,0,0,0" />
+                                </Button>
+                                <StackPanel Grid.Row="1"
+                                        Margin="8,24,8,134">
+                                    <TextBlock FontWeight="Bold"><Run Language="ru-ru" Text="Пицца Пепперони"/></TextBlock>
+                                    <TextBlock
+                                        TextWrapping="Wrap" Height="192" RenderTransformOrigin="0.531,0.445" ><Run Language="ru-ru" Text="      Пицца «Пеперони» — это классическое итальянское блюдо, которое состоит из тонкого слоя теста, сочной томатной подливы, сыра моцарелла и нарезанных колбасок пепперони. Это сочетание придает пицце острый и насыщенный вкус, который обязательно понравится любителям итальянской кухни."/></TextBlock>
+                                </StackPanel>
+                                <StackPanel
+                                  Grid.Row="2"
+                                  Margin="262,8,0,8"
+                                  HorizontalAlignment="Left"
+                                  Orientation="Horizontal" Width="30"
+                                >
+                                    <Button Width="30"
+                                    HorizontalAlignment="Center"
+                                    Padding="2,0,2,0"
+                                    materialDesign:RippleAssist.IsCentered="True"
+                                    Style="{StaticResource MaterialDesignToolButton}"
+                                    />
+                                </StackPanel>
+                            </Grid>
+                        </materialDesign:Card>
+                        <!--#endregion-->
+                        <!--#region Карточка 2-->
+                        <materialDesign:Card Grid.Column="1" Width="300">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="190" />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Image Width="auto"
+                                   Height="auto"
+                                   Source="/итальянская.png"
+                                   Stretch="UniformToFill" 
+                                   />
+                                <Button
+                                
+                                Grid.Row="2"
+                                Margin="137,53,0,-180"
+                                HorizontalAlignment="Left"
+                                Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryButton}" Background="#FFFDE910" Width="40"
+                                >
+                                    <materialDesign:PackIcon
+                                    Kind="BasketPlus" Margin="0,0,0,0" />
+                                </Button>
+                                <StackPanel Grid.Row="1"
+                                        Margin="8,24,8,134">
+                                    <TextBlock FontWeight="Bold"><Run Text="Пицца "/><Run Language="ru-ru" Text="Капричоза"/></TextBlock>
+                                    <TextBlock
+                                        TextWrapping="Wrap" Height="192" RenderTransformOrigin="0.531,0.445" ><Run Language="ru-ru" Text="       Пицца «Капричоза» — это настоящая находка для любителей итальянской кухни! Сочная томатная подлива, свежий салат руккола и обильное количество сыра моцарелла делают эту пиццу идеальным выбором для тех, кто хочет насладиться вкусом настоящей Италии."/></TextBlock>
+                                </StackPanel>
+                                <StackPanel
+                                  Grid.Row="2"
+                                  Margin="262,8,0,8"
+                                  HorizontalAlignment="Left"
+                                  Orientation="Horizontal" Width="30"
+                                >
+                                    <Button Width="30"
+                                    HorizontalAlignment="Center"
+                                    Padding="2,0,2,0"
+                                    materialDesign:RippleAssist.IsCentered="True"
+                                    Style="{StaticResource MaterialDesignToolButton}"
+                                    />
+                                </StackPanel>
+                            </Grid>
+                        </materialDesign:Card>
+                        <!--#endregion-->
+                        <!--#region Карточка 3-->
+                        <materialDesign:Card Grid.Column="2" Width="300">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="190" />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Image Width="auto"
+                                   Height="auto"
+                                   Source="/маргарита.png"
+                                   Stretch="UniformToFill" 
+                                   />
+                                <Button
+                                
+                                Grid.Row="2"
+                                Margin="137,53,0,-180"
+                                HorizontalAlignment="Left"
+                                Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryButton}" Background="#FFFDE910" Width="40"
+                                >
+                                    <materialDesign:PackIcon
+                                    Kind="BasketPlus" Margin="0,0,0,0" />
+                                </Button>
+                                <StackPanel Grid.Row="1"
+                                        Margin="8,24,8,134">
+                                    <TextBlock FontWeight="Bold"><Run Language="ru-ru" Text="Пицца Маргарита"/></TextBlock>
+                                    <TextBlock
+                                        TextWrapping="Wrap" Height="192" RenderTransformOrigin="0.531,0.445" ><Run Language="ru-ru" Text="       "/><Run Text="Пицца «Маргарита» — это классическое итальянское блюдо, которое не оставит равнодушным даже самого требовательного гурмана. Тонкое тесто, сочная томатная подлива, ароматный сыр моцарелла и свежие помидоры создают идеальное сочетание вкусов, которое позволяет наслаждаться каждым кусочком этой великолепной пиццы.."/></TextBlock>
+                                </StackPanel>
+                                <StackPanel
+                                  Grid.Row="2"
+                                  Margin="262,8,0,8"
+                                  HorizontalAlignment="Left"
+                                  Orientation="Horizontal" Width="30"
+                                >
+                                    <Button Width="30"
+                                    HorizontalAlignment="Center"
+                                    Padding="2,0,2,0"
+                                    materialDesign:RippleAssist.IsCentered="True"
+                                    Style="{StaticResource MaterialDesignToolButton}"
+                                    />
+                                </StackPanel>
+                            </Grid>
+                        </materialDesign:Card>
+                        <!--#endregion-->
+                    </Grid>
+                </TabItem>
+                <!--#endregion-->
+                <!--#region Вкладка 2-->
+                <TabItem Header="Конструктор пиццы" Width="300" Grid.Column="2" HorizontalAlignment="Center">
+                    <Grid Background="White" Height="597">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100*"></ColumnDefinition>
+                            <ColumnDefinition Width="100*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <!--#region Слайдер 1-->
+                        <GroupBox Margin="428,51,255,343" Grid.ColumnSpan="2" Background="White" BorderBrush="#FFCBCB18">
+                            <Grid Width="289" Margin="0,-13,0,-15">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="16*"/>
+                                    <ColumnDefinition Width="228*"/>
+                                    <ColumnDefinition Width="39*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <materialDesign:PackIcon Kind="Sausage" Height="45" Width="45" Margin="10,21,0,0" Grid.Column="1" >
+                                    <materialDesign:PackIcon.Background>
+                                        <ImageBrush ImageSource="/колбаса.png"/>
+                                    </materialDesign:PackIcon.Background>
+                                    <materialDesign:PackIcon.Foreground>
+                                        <SolidColorBrush Color="#FFEA5252" Opacity="0"/>
+                                    </materialDesign:PackIcon.Foreground>
+                                </materialDesign:PackIcon>
+                                <TextBlock RenderTransformOrigin="0.5,0.5" TextAlignment="Center" Margin="60,39,94,62" Grid.Column="1">
+                                    <TextBlock.RenderTransform>
+                                        <TransformGroup>
+                                            <SkewTransform/>
+                                            <RotateTransform/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </TextBlock.RenderTransform><Run Language="ru-ru" Text="Колбаса"/></TextBlock>
+                                <ToggleButton
+  Style="{StaticResource MaterialDesignSwitchToggleButton}"
+  ToolTip="MaterialDesignSwitchToggleButton with Custom Track Background" Margin="126,15,68,54" Grid.Column="1">
+                                    <materialDesign:ToggleButtonAssist.SwitchTrackOnBackground>
+                                        <SolidColorBrush
+      Color="Green" />
+                                    </materialDesign:ToggleButtonAssist.SwitchTrackOnBackground>
+                                    <materialDesign:ToggleButtonAssist.SwitchTrackOffBackground>
+                                        <SolidColorBrush
+      Color="Red" />
+                                    </materialDesign:ToggleButtonAssist.SwitchTrackOffBackground>
+                                </ToggleButton>
+                            </Grid>
+                        </GroupBox>
+                        <!--#endregion-->
+
+                        <!--#region Слайдер 2-->
+                        <GroupBox Margin="242,51,35,343" Grid.Column="1" Background="White">
+                            <Grid Width="283" Margin="0,-13,0,-7">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="16*"/>
+                                    <ColumnDefinition Width="267*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <materialDesign:PackIcon Kind="Cheese" Height="45" Width="45" Margin="10,21,0,0" Grid.Column="1" >
+                                    <materialDesign:PackIcon.Background>
+                                        <ImageBrush ImageSource="/сыр.png"/>
+                                    </materialDesign:PackIcon.Background>
+                                    <materialDesign:PackIcon.Foreground>
+                                        <SolidColorBrush Color="#FFF4BB40" Opacity="0"/>
+                                    </materialDesign:PackIcon.Foreground>
+                                </materialDesign:PackIcon>
+                                <TextBlock RenderTransformOrigin="0.5,0.5" TextAlignment="Center" Margin="40,21,145,62" Grid.Column="1" Text="Сыр">
+                                    <TextBlock.RenderTransform>
+                                        <TransformGroup>
+                                            <SkewTransform/>
+                                            <RotateTransform/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </TextBlock.RenderTransform></TextBlock>
+                                <ToggleButton
+  Style="{StaticResource MaterialDesignSwitchToggleButton}"
+  ToolTip="MaterialDesignSwitchToggleButton with Custom Track Background" Margin="119,16,114,53" Grid.Column="1">
+                                    <materialDesign:ToggleButtonAssist.SwitchTrackOnBackground>
+                                        <SolidColorBrush
+      Color="Green" />
+                                    </materialDesign:ToggleButtonAssist.SwitchTrackOnBackground>
+                                    <materialDesign:ToggleButtonAssist.SwitchTrackOffBackground>
+                                        <SolidColorBrush
+      Color="Red" />
+                                    </materialDesign:ToggleButtonAssist.SwitchTrackOffBackground>
+                                </ToggleButton>
+                            </Grid>
+                        </GroupBox>
+                        <!--#endregion-->
+
+                        <!--#region Слайдер 3-->
+                        <GroupBox Margin="430,198,255,198" Grid.ColumnSpan="2" Background="White">
+                            <Grid Width="283" Margin="0,-13,0,-7">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="16*"/>
+                                    <ColumnDefinition Width="267*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <materialDesign:PackIcon Kind="Mushroom" Height="45" Width="45" Margin="10,21,0,0" Grid.Column="1" >
+                                    <materialDesign:PackIcon.Background>
+                                        <ImageBrush ImageSource="/гриб.png"/>
+                                    </materialDesign:PackIcon.Background>
+                                    <materialDesign:PackIcon.Foreground>
+                                        <SolidColorBrush Color="#FF685C2D" Opacity="0"/>
+                                    </materialDesign:PackIcon.Foreground>
+                                </materialDesign:PackIcon>
+                                <TextBlock RenderTransformOrigin="0.5,0.5" TextAlignment="Center" Margin="55,21,141,68" Grid.Column="1" Text="Грибы">
+                                    <TextBlock.RenderTransform>
+                                        <TransformGroup>
+                                            <SkewTransform/>
+                                            <RotateTransform/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </TextBlock.RenderTransform></TextBlock>
+                                <ToggleButton
+  Style="{StaticResource MaterialDesignSwitchToggleButton}"
+  ToolTip="MaterialDesignSwitchToggleButton with Custom Track Background" Margin="126,16,107,53" Grid.Column="1">
+                                    <materialDesign:ToggleButtonAssist.SwitchTrackOnBackground>
+                                        <SolidColorBrush
+      Color="Green" />
+                                    </materialDesign:ToggleButtonAssist.SwitchTrackOnBackground>
+                                    <materialDesign:ToggleButtonAssist.SwitchTrackOffBackground>
+                                        <SolidColorBrush
+      Color="Red" />
+                                    </materialDesign:ToggleButtonAssist.SwitchTrackOffBackground>
+                                </ToggleButton>
+                            </Grid>
+                        </GroupBox>
+                        <!--#endregion-->
+
+                        <!--#region Слайдер 4-->
+                        <GroupBox Margin="242,198,35,198" Grid.Column="1" Background="White">
+                            <Grid Width="283" Margin="0,-13,0,-7">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="16*"/>
+                                    <ColumnDefinition Width="267*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <materialDesign:PackIcon Kind="FruitPear" Height="45" Width="45" Margin="10,21,0,0" Grid.Column="1" >
+                                    <materialDesign:PackIcon.Background>
+                                        <ImageBrush ImageSource="/томат.png"/>
+                                    </materialDesign:PackIcon.Background>
+                                    <materialDesign:PackIcon.Foreground>
+                                        <SolidColorBrush Color="Red" Opacity="0"/>
+                                    </materialDesign:PackIcon.Foreground>
+                                </materialDesign:PackIcon>
+                                <TextBlock RenderTransformOrigin="0.5,0.5" TextAlignment="Center" Margin="55,21,141,69" Grid.Column="1">
+                                    <TextBlock.RenderTransform>
+                                        <TransformGroup>
+                                            <SkewTransform/>
+                                            <RotateTransform/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </TextBlock.RenderTransform><Run Language="ru-ru" Text="Помидоры"/></TextBlock>
+                                <ToggleButton
+  Style="{StaticResource MaterialDesignSwitchToggleButton}"
+  ToolTip="MaterialDesignSwitchToggleButton with Custom Track Background" Margin="138,10,95,43" Grid.Column="1">
+                                    <materialDesign:ToggleButtonAssist.SwitchTrackOnBackground>
+                                        <SolidColorBrush
+      Color="Green" />
+                                    </materialDesign:ToggleButtonAssist.SwitchTrackOnBackground>
+                                    <materialDesign:ToggleButtonAssist.SwitchTrackOffBackground>
+                                        <SolidColorBrush
+      Color="Red" />
+                                    </materialDesign:ToggleButtonAssist.SwitchTrackOffBackground>
+                                </ToggleButton>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Margin="430,343,255,53" Grid.ColumnSpan="2" Background="White">
+                            <Grid Width="283" Margin="0,-13,0,-7">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="16*"/>
+                                    <ColumnDefinition Width="267*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <materialDesign:PackIcon Kind="Corn" Height="45" Width="45" Margin="10,21,0,0" Grid.Column="1" >
+                                    <materialDesign:PackIcon.Foreground>
+                                        <SolidColorBrush Color="Black" Opacity="0"/>
+                                    </materialDesign:PackIcon.Foreground>
+                                    <materialDesign:PackIcon.Background>
+                                        <ImageBrush ImageSource="/огурец.png"/>
+                                    </materialDesign:PackIcon.Background>
+                                </materialDesign:PackIcon>
+                                <TextBlock RenderTransformOrigin="0.5,0.5" TextAlignment="Center" Margin="32,21,141,69" Grid.Column="1" Text="Огурцы">
+                                    <TextBlock.RenderTransform>
+                                        <TransformGroup>
+                                            <SkewTransform/>
+                                            <RotateTransform/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </TextBlock.RenderTransform></TextBlock>
+                                <ToggleButton
+                                Style="{StaticResource MaterialDesignSwitchToggleButton}"
+                                ToolTip="MaterialDesignSwitchToggleButton with Custom Track Background" Margin="126,16,107,53" Grid.Column="1" materialDesign:ToggleButtonAssist.SwitchTrackOnBackground="Green" materialDesign:ToggleButtonAssist.SwitchTrackOffBackground="Red"/>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Margin="242,343,35,53" Grid.Column="1" Background="White">
+                            <Grid Width="283" Margin="0,-13,0,-7">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="16*"/>
+                                    <ColumnDefinition Width="267*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <materialDesign:PackIcon Kind="PigVariant" Height="45" Width="45" Margin="10,21,0,0" Grid.Column="1" >
+                                    <materialDesign:PackIcon.Background>
+                                        <ImageBrush ImageSource="/бекон1.jpg"/>
+                                    </materialDesign:PackIcon.Background>
+                                    <materialDesign:PackIcon.Foreground>
+                                        <SolidColorBrush Color="#FFDD82DD" Opacity="0"/>
+                                    </materialDesign:PackIcon.Foreground>
+                                </materialDesign:PackIcon>
+                                <TextBlock RenderTransformOrigin="0.5,0.5" TextAlignment="Center" Margin="32,21,141,70" Grid.Column="1" Text="Бекон">
+                                    <TextBlock.RenderTransform>
+                                        <TransformGroup>
+                                            <SkewTransform/>
+                                            <RotateTransform/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </TextBlock.RenderTransform></TextBlock>
+                                <ToggleButton
+                                Style="{StaticResource MaterialDesignSwitchToggleButton}"
+                                ToolTip="MaterialDesignSwitchToggleButton with Custom Track Background" Margin="126,16,107,53" Grid.Column="1" materialDesign:ToggleButtonAssist.SwitchTrackOnBackground="Green" materialDesign:ToggleButtonAssist.SwitchTrackOffBackground="Red"/>
+                            </Grid>
+                        </GroupBox>
+                        <Border BorderThickness="1" HorizontalAlignment="Left" Height="415" Margin="10,0,0,0" VerticalAlignment="Center" Width="413">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/основа1.png"/>
+                            </Border.Background>
+                        </Border>
+                        <!--#endregion-->
+                    </Grid>
+                </TabItem>
+                <!--#endregion-->
+
+                <!--#region Вкладка 3-->
+                <TabItem Header="Корзина" Width="300" Grid.Column="3" HorizontalAlignment="Center">
+                    <Grid Background="#FFE5E5E5">
+                        <DataGrid Margin="0,-248,0,0">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Пицца" Binding="{Binding Path=Title}" Width="100" />
+                                <DataGridHyperlinkColumn Header="Количество" Binding="{Binding Path=Company}" Width="110" />
+                                <DataGridTextColumn Header="Цена" Binding="{Binding Path=Price}" Width="80" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        
+                        <Button Content="Заказать" HorizontalAlignment="Left" Margin="763,5,0,0" VerticalAlignment="Top" Height="30" Width="107" Background="#FFEDE80E" Foreground="#DD25AA1B" BorderBrush="#FF28DA24"/>
+                    </Grid>
+                </TabItem>
+                <!--#endregion-->
+
+            </TabControl>
+
+
+
+
+
+
+
+
+
+
+
+
+        </Grid>
+
+
+    </Viewbox>
+
+
+</Window>
